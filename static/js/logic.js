@@ -49,7 +49,7 @@ function createMap(earthquakes) {
 
     console.log(earthquakes);
 
-    // add legend 
+    // Add a legend 
     var legend = L.control({position: 'bottomright'});
     legend.onAdd = function () {
 
@@ -57,7 +57,7 @@ function createMap(earthquakes) {
             grades = [0, 1, 2, 3, 4, 5],
             labels = [];
     
-        // loop through our density intervals and generate a label with a colored square for each interval
+        // Loop through the density intervals and generate a label with a colored square for each interval
         for (var i = 0; i < grades.length; i++) {
             div.innerHTML +=
                 '<i style="background:' + getColor(grades[i]) + '"></i> ' +
@@ -84,8 +84,6 @@ function createMarkers(response) {
     let earthquakeMarkers = [];
 
 
-    // let count = 0
-    // if (count < 10) {
     // Loop through each earthquake, create a circle marker, and add the marker to the list
     data.forEach(earthquake => {
         let lat = earthquake.geometry.coordinates[1];
@@ -93,9 +91,8 @@ function createMarkers(response) {
         let mag = earthquake.properties.mag;
         let place = earthquake.properties.place
         let time = Date(earthquake.properties.time)
-        // let latlng = L.latLng(earthquake.geometry.coordinates)
 
-        // send magnitued to radius function
+        // Send the magnitued to radius function
         getRadius(mag);
         getColor(mag);
 
@@ -116,14 +113,13 @@ function createMarkers(response) {
 
 
     });
-    // };
     
 
 
     // Group the markers to a map layer 
     const markersLayer = L.layerGroup(earthquakeMarkers);
 
-    // call the map creation function 
+    // Call the map creation function 
     createMap(markersLayer);
 
 
