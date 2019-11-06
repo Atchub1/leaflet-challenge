@@ -19,5 +19,3 @@ The USGS provides earthquake data in a number of different formats, updated ever
    * Earthquakes with higher magnitudes should appear larger and darker in color
 
    * Popups provide additional information about the earthquake
-
-   * Create a legend that will provide context for your map data
