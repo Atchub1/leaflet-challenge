@@ -10,6 +10,8 @@ The USGS provides earthquake data in a number of different formats, updated ever
 
 <hr>
 
+## Visualization
+
   Using Leaflet I plotted all of the earthquakes, that occured in 1 day, based on thier longitude and latitude.
 
    * Earthquakes with higher magnitudes should appear larger and darker in color
