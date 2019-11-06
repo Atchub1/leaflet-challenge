@@ -12,9 +12,9 @@ The USGS provides earthquake data in a number of different formats, updated ever
 
 ## Visualization
 
-  Using Leaflet I plotted all of the earthquakes, that occured in 1 day, based on thier longitude and latitude.
+  Using Leaflet I plotted all earthquakes that occured in 1 day, based on thier longitude and latitude.
 
-   * Earthquakes with higher magnitudes should appear larger and darker in color
+   * Earthquakes with higher magnitudes appear larger and darker in color
 
    * Popups provide additional information about the earthquake
 
